@@ -2,19 +2,17 @@ package com.smtech.pmt.common;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-@ConfigurationProperties("common")
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
+
+@ConfigurationProperties("pmt.common")
+@AllArgsConstructor
+@Setter
+@Getter
+@Builder
 public class ServiceProperties {
-
-	/**
-	 * A message for the service.
-	 */
-	private String message;
-
-	public String getMessage() {
-		return message;
-	}
-
-	public void setMessage(String message) {
-		this.message = message;
-	}
+	private String	message;
+	private String	protocol;
 }
