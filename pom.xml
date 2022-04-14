@@ -11,7 +11,7 @@
 	</parent>
 	<groupId>com.smtech</groupId>
 	<artifactId>pmt-common</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<name>pmt-common</name>
 	<description>pmt common library</description>
 	<properties>
@@ -58,13 +58,28 @@
 		</repository>
 	</repositories>
 
-	<annotationProcessorPaths>
-		<path>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<version>1.18.20</version>
-		</path>
-	</annotationProcessorPaths>
+
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.6.0</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+					<annotationProcessorPaths>
+						<path>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok</artifactId>
+							<version>1.18.20</version>
+						</path>
+					</annotationProcessorPaths>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 
 	<!-- see https://github.com/TobseF/HelloMaven for uploading your package to github -->
 	<distributionManagement>

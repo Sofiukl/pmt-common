@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest("common.message=Common Message")
+@SpringBootTest("pmt.common.message=Common Message")
 public class MyServiceTest {
 
   @Autowired
